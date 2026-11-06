@@ -1,0 +1,51 @@
+/* Phone-first controls: thumb joystick, one-tap dancing, and compact HUD. */
+.mobile-stick,.mobile-dance{display:none}
+@media(max-width:700px){
+ .mission-card{top:82px;left:13px;width:146px}
+ .mission-card h1{font-size:32px;line-height:.95;letter-spacing:-1.7px;margin:12px 0 8px}
+ .mission-copy{font-size:9px;line-height:1.45;max-width:145px;margin-bottom:10px}
+ .mission-card .eyebrow{font-size:6.5px;letter-spacing:.65px;gap:5px}
+ .mission-card .eyebrow-line{width:12px}
+ .mission-progress{gap:7px;font-size:8px}
+ .progress-track{width:84px}
+ .mission-reward{font-size:6px;letter-spacing:.35px;margin-top:9px}
+ .social-card{top:82px;right:12px;bottom:auto;width:164px;padding:9px;background:rgba(17,20,30,.82)}
+ .social-head{height:20px;font-size:6.5px;letter-spacing:.65px;gap:5px}
+ .social-person{gap:7px;padding:9px 0 7px}
+ .avatar{width:29px;height:29px;font-size:12px}
+ .person-copy strong{font-size:10px}
+ .person-copy span{font-size:7px}
+ .mood-icon{font-size:18px}
+ .social-hint{padding:7px 0;font-size:7px}
+ .invite-button{height:31px;padding:0 7px;gap:5px;font-size:6.5px;letter-spacing:.45px}
+ .invite-key{display:none}
+ .xp-chip{top:62px;right:13px;transform:scale(.84);transform-origin:top right}
+ .dance-panel{bottom:24px;width:calc(100% - 28px);max-width:355px;padding:8px}
+ .dance-label{font-size:6.5px;margin-bottom:6px}
+ .dance-label span{font-size:6px}
+ .dance-button{height:37px;justify-content:center;gap:5px}
+ .dance-symbol{font-size:16px}
+ .dance-name{font-size:7px}
+ .dance-number{right:4px;top:3px;font-size:6px}
+ .controls-hint{display:none}
+ .beat-indicator{bottom:6px;right:13px;transform:scale(.8);transform-origin:bottom right}
+ .mobile-stick{position:absolute;z-index:3;left:14px;bottom:122px;width:92px;height:103px;display:flex;align-items:center;flex-direction:column;justify-content:flex-start;gap:5px;touch-action:none;user-select:none;-webkit-user-select:none}
+ .stick-ring{width:78px;height:78px;border:1px solid rgba(255,255,255,.32);background:rgba(13,16,25,.35);border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 18px rgba(255,255,255,.04),0 4px 20px rgba(0,0,0,.2)}
+ .stick-knob{width:36px;height:36px;border-radius:50%;background:rgba(213,255,101,.82);border:1px solid rgba(255,255,255,.6);box-shadow:0 0 20px rgba(213,255,101,.25);transform:translate(0,0);transition:transform .05s}
+ .mobile-stick small,.mobile-dance small{font:7px 'DM Mono',monospace;letter-spacing:1px;color:#e5e5ea;text-shadow:0 1px 5px #10111a}
+ .mobile-dance{position:absolute;z-index:3;right:15px;bottom:124px;width:57px;height:57px;border-radius:50%;display:grid;place-content:center;gap:1px;border:1px solid rgba(255,105,180,.9);background:rgba(255,105,180,.2);color:#fff;box-shadow:0 0 20px rgba(255,105,180,.2);touch-action:manipulation;cursor:pointer}
+ .mobile-dance span{font-size:21px;line-height:21px;color:#ff8bc3}
+ .mobile-dance small{font-size:6px}
+ .intro-panel{width:min(360px,calc(100% - 34px));padding:25px 22px 18px}
+ .intro-panel h2{font-size:46px}
+}
+@media(max-width:360px){
+ .mission-card{left:10px;width:124px}
+ .mission-card h1{font-size:27px}
+ .mission-copy{font-size:8px;max-width:122px}
+ .social-card{right:8px;width:142px;padding:8px}
+ .social-hint{font-size:6.5px}
+ .invite-button{font-size:6px;letter-spacing:.25px}
+ .dance-panel{width:calc(100% - 20px);padding:7px}
+ .dance-button{gap:3px}
+}

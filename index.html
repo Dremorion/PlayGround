@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#10131e" />
+  <link rel="icon" href="data:," />
+  <title>NEON GROOVE — After Hours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Groove home"><span class="brand-mark">✳</span><span>AFTER<span class="brand-light">HOURS</span></span></a>
+      <div class="session-pill"><span class="live-dot"></span> ROOFTOP SESSION <span class="pill-divider">/</span> <span id="clock">00:00</span></div>
+      <button class="sound-button" id="sound-toggle" aria-label="Toggle sound"><span id="sound-icon">♫</span><span class="sound-label">SOUND ON</span></button>
+    </header>
+
+    <section class="mission-card" aria-live="polite">
+      <div class="eyebrow"><span class="eyebrow-line"></span> TONIGHT'S MISSION <span class="mission-step">01 / 03</span></div>
+      <h1>Find your<br><em>rhythm.</em></h1>
+      <p class="mission-copy" id="mission-copy">Walk up to someone on the floor and start a dance-off.</p>
+      <div class="mission-progress"><div class="progress-track"><span id="progress-fill"></span></div><span id="progress-count">0 / 3</span></div>
+      <div class="mission-reward"><span class="reward-star">✦</span> COMPLETE THE SET <b>+300 XP</b></div>
+    </section>
+
+    <aside class="social-card" id="social-card">
+      <div class="social-head"><span class="status-pulse"></span><span id="social-title">THE FLOOR IS YOURS</span><span class="head-count">LIVE</span></div>
+      <div class="social-person">
+        <div class="avatar avatar-lime">M</div>
+        <div class="person-copy"><strong id="npc-name">Mika</strong><span id="npc-mood">feeling the beat · 2m away</span></div>
+        <span class="mood-icon">⌁</span>
+      </div>
+      <div class="social-hint" id="social-hint">Get closer to meet someone</div>
+      <button class="invite-button" id="invite-button" disabled><span id="invite-icon">↗</span><span id="invite-text">APPROACH A DANCER</span><span class="invite-key">E</span></button>
+    </aside>
+
+    <div class="xp-chip"><span>✦</span><div><small>GROOVE POINTS</small><strong id="score">0000</strong></div><div class="level-badge">LVL<br><b>01</b></div></div>
+
+    <div class="dance-panel">
+      <div class="dance-label">CHOOSE YOUR MOVE <span>TAP TO DANCE</span></div>
+      <div class="dance-buttons">
+        <button class="dance-button active" data-dance="bounce"><span class="dance-symbol">↟</span><span class="dance-name">BOUNCE</span><span class="dance-number">01</span></button>
+        <button class="dance-button" data-dance="wave"><span class="dance-symbol">〰</span><span class="dance-name">WAVE</span><span class="dance-number">02</span></button>
+        <button class="dance-button" data-dance="spin"><span class="dance-symbol">⟳</span><span class="dance-name">SPIN</span><span class="dance-number">03</span></button>
+      </div>
+    </div>
+
+    <div class="mobile-stick" id="mobile-stick" aria-label="Movement joystick"><span class="stick-ring"><span class="stick-knob" id="stick-knob"></span></span><small>MOVE</small></div>
+    <button class="mobile-dance" id="mobile-dance" aria-label="Dance now"><span>✳</span><small>DANCE</small></button>
+    <div class="controls-hint"><span class="keys"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><span>MOVE</span><i></i><span class="keys"><kbd>DRAG</kbd></span><span>LOOK</span></div>
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <div class="beat-indicator"><span class="beat-label">BPM</span><strong>112</strong><span class="beat-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+
+    <div class="intro-overlay" id="intro-overlay">
+      <div class="intro-panel">
+        <div class="intro-icon">✳</div>
+        <div class="eyebrow">A LITTLE NIGHT MAGIC</div>
+        <h2>Make the<br><em>floor yours.</em></h2>
+        <p>Meet the crew. Find your groove. Leave with a story.</p>
+        <button id="start-button" class="start-button">STEP INTO THE NIGHT <span>↗</span></button>
+        <div class="intro-controls"><span>STICK <i>MOVE</i></span><span>✳ <i>DANCE</i></span><span>GET CLOSE <i>CONNECT</i></span></div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
