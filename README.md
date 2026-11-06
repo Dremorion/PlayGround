@@ -16,3 +16,18 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/Dremorion).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## Legacy of Eternia — First Light
+
+Open `index.html` in a browser (or serve the repository with any static HTTP server) to play.
+
+### Controls
+
+- Move with **WASD / arrow keys**, or the left virtual joystick on touch screens.
+- Click a monster to target it; press **Space / Enter** or tap **Attack** when nearby.
+- Use **1 / Power** for Cleave, **Q / potion slot** to heal, and **I / Inventory** to inspect loot.
+- Walk over gold and equipment drops to collect them. Defeated monsters return after a short respawn.
+
+### Multiplayer foundation
+
+This is a **single-player prototype**, not an offline simulation of an MMO. There are no fake human players. The client creates a stable session player ID and has a transport seam for player commands (`move`, `attack`, `skill`) plus versioned authoritative snapshots (self position/health/mana, player roster, and shared world state). No server transport is connected yet; combat and world simulation currently run locally. A production server should validate commands and own movement, combat, respawns, drops, and shared state before broadcasting snapshots.
