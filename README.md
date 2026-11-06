@@ -26,7 +26,7 @@ Open `index.html` in a browser (or serve the repository with any static HTTP ser
 - Move with **WASD / arrow keys**, or the left virtual joystick on touch screens.
 - Click a monster to target it; press **Space / Enter** or tap **Attack** when nearby.
 - Use **1 / Power** for Cleave, **Q / potion slot** to heal, and **I / Inventory** to inspect loot.
-- Walk over gold and equipment drops to collect them. Defeated monsters return after a short respawn.
+- Collect nearby gold and equipment by walking over it or tapping the drop; tap a packed item in **Inventory** to equip it. Defeated monsters return after a short respawn.
 
 ### Multiplayer foundation
 
