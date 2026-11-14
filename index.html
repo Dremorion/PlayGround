@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#101619" />
+  <title>FACILITY 09 — Breach Protocol</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/style.css" />
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+  <script type="module" src="/game.js"></script>
+</head>
+<body>
+  <main id="game" aria-label="Facility 09 mobile first-person shooter">
+    <canvas id="view"></canvas>
+    <div class="vignette"></div>
+    <div class="topline"><span class="brand">◈ &nbsp;FACILITY 09</span><span class="mission"><i></i> CONTAINMENT BREACH &nbsp; / &nbsp; SECTOR C</span><span class="wave">THREAT <b id="threat">03</b></span></div>
+    <div class="crosshair"><i></i><b></b><em></em><strong></strong><span></span></div>
+    <div id="hitmarker" class="hitmarker">×</div>
+    <div id="damageflash" class="damageflash"></div>
+    <div class="bottom-ui">
+      <section class="vitals panel">
+        <div class="panelhead"><span>VITAL SIGNS</span><span class="led"></span></div>
+        <div class="stat"><span class="icon heart">♥</span><div class="statbody"><div class="label"><span>HEALTH</span><b id="healthNum">100</b></div><div class="bar"><i id="healthBar" class="healthbar"></i></div></div></div>
+        <div class="stat"><span class="icon shield">⬡</span><div class="statbody"><div class="label"><span>ARMOR</span><b id="armorNum">50</b></div><div class="bar"><i id="armorBar" class="armorbar"></i></div></div></div>
+      </section>
+      <div class="level-readout"><span>DEPTH</span><b>−048 <small>M</small></b><i>● FACILITY POWER: NOMINAL</i></div>
+      <section class="weapon panel"><div class="panelhead"><span>ACTIVE SYSTEM</span><span class="led"></span></div><div class="weaponrow"><div class="weaponicon">╱╲<br>▰</div><div><b>PULSE CARBINE</b><span>ENERGY CELL <strong id="ammo">∞</strong></span></div><div class="weaponpulse">◉</div></div></section>
+    </div>
+    <div class="touch-layer" id="touchLayer">
+      <div class="joystick" id="stick"><div class="stick-ring"><span class="stick-knob" id="knob"></span></div><span class="stick-label">MOVE</span></div>
+      <button class="action jump" id="jump"><span class="actionglyph">↑</span><span>JUMP</span></button>
+      <button class="action fire" id="fire"><span class="actionglyph">✦</span><span>FIRE</span></button>
+      <div class="lookhint">DRAG TO LOOK</div>
+    </div>
+    <div id="portrait" class="portrait"><span>⤢</span><b>ROTATE DEVICE</b><small>FACILITY 09 REQUIRES LANDSCAPE</small></div>
+    <div id="startScreen" class="modal">
+      <div class="modal-card"><div class="eyebrow"><i></i> EMERGENCY BROADCAST // 09.17.86</div><div class="titlemark">F09<span>◈</span></div><h1>BREACH<br><em>PROTOCOL</em></h1><p>Containment is lost. Something is moving in the lower corridors.</p>
+        <div class="briefing"><span>OBJECTIVE</span><b>NEUTRALIZE HOSTILES &nbsp;·&nbsp; SURVIVE</b></div>
+        <div class="instructions"><div><b>◉</b><span>LEFT STICK<br><small>MOVE</small></span></div><div><b>⌖</b><span>DRAG RIGHT<br><small>LOOK &amp; AIM</small></span></div><div><b>✦</b><span>FIRE<br><small>HOLD TO SHOOT</small></span></div></div>
+        <button id="startButton" class="startbutton">INITIALIZE SYSTEMS <span>→</span></button><div class="touchonly">TOUCH CONTROLS ONLY &nbsp; / &nbsp; ANDROID READY</div>
+      </div>
+    </div>
+    <div id="endScreen" class="modal hidden"><div class="modal-card endcard"><div class="eyebrow">// SYSTEM REPORT</div><h1 id="endTitle">MISSION<br><em>COMPLETE</em></h1><p id="endText">The corridor is secure. Facility 09 is still standing.</p><div class="briefing"><span>HOSTILES NEUTRALIZED</span><b id="finalKills">00</b></div><button id="restartButton" class="startbutton">REDEPLOY <span>→</span></button></div></div>
+  </main>
+</body>
+</html>
